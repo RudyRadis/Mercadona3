@@ -20,7 +20,7 @@ final class Version20231102175348 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('DROP SEQUENCE product_id_seq1 CASCADE');
+        // $this->addSql('DROP SEQUENCE product_id_seq1 CASCADE');
         $this->addSql('ALTER TABLE product ALTER id DROP DEFAULT');
     }
 
