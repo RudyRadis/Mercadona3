@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mercadona{% endblock %}
+        
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">{% endblock %}
+
+{% block body %}
+{{ include('fragment/nav.html.twig')}}
+
+{# content body #}
+
+<div class="margin-nav">       
+</div>
+
+<h1>Politiques de confidentilaité</h1>
+<section class="privacy_policy">
+    <h2>1. Introduction</h2>
+    <p>Bienvenue sur Mercadona ("nous", "notre", "nos"), votre source fiable pour [insérez ici les produits/services offerts]. Nous comprenons que la confidentialité en ligne est cruciale pour les utilisateurs de notre site, en particulier lors de la conduite des affaires. Cette déclaration régit notre politique de confidentialité en ce qui concerne les utilisateurs du site ("Visiteurs") qui visitent sans faire de commerce et les Visiteurs qui s'inscrivent pour faire du commerce sur le Site et utiliser les services proposés par Mercadona ("Services") ("Clients autorisés").</p>
+    <h2>2. Informations Personnellement Identifiables</h2>
+    <p>"Informations Personnellement Identifiables" se réfère à toutes les informations qui identifient ou peuvent être utilisées pour identifier, contacter ou localiser la personne à qui ces informations appartiennent. Ces informations incluent, mais ne sont pas limitées à, le nom, l'adresse, le numéro de téléphone, l'adresse e-mail et les informations sur la carte de crédit. Les informations personnellement identifiables ne comprennent pas les informations collectées de manière anonyme (c'est-à-dire, sans identification de l'utilisateur individuel) ou les informations démographiques non connectées à une personne identifiée.</p>
+    <h2>3. Quelles Informations Personnellement Identifiables sont Collectées?</h2>
+    <p>Nous pouvons collecter des informations de base sur le profil de l'utilisateur de tous nos Visiteurs. Nous collectons les informations supplémentaires suivantes des nos Clients autorisés : les noms, adresses, numéros de téléphone et adresses e-mail des Clients autorisés, la nature et la taille de l'entreprise, et la nature et la taille de l'inventaire publicitaire que le Client autorisé a l'intention d'acheter ou de vendre.</p>
+    <h2>4. Comment Utilisons-Nous les Informations Personnellement Identifiables?</h2>
+    <p>Nous utilisons les Informations Personnellement Identifiables pour personnaliser le Site, faire des offres de services appropriées et répondre aux demandes d'achat et de vente sur le Site. Nous pouvons utiliser les Informations Personnellement Identifiables pour contacter les Visiteurs et Clients autorisés en réponse à des demandes spécifiques, ou pour fournir des informations demandées.</p>
+    <h2>5. Avec Qui Pouvons-Nous Partager les Informations?</h2>
+    <p>Nous pouvons partager des informations sur les Clients autorisés et les Visiteurs avec nos filiales, fournisseurs et autres tiers de confiance avec lesquels nous avons des accords de confidentialité. Ces tiers peuvent utiliser les Informations Personnellement Identifiables pour évaluer l'efficacité de la publicité et du marketing, et pour aider à personnaliser les services et les offres sur le Site.</p>
+    <h2>6. Comment Stockons-Nous les Informations Personnellement Identifiables?</h2>
+    <p>Les Informations Personnellement Identifiables collectées par Mercadona sont stockées en toute sécurité et ne sont pas accessibles à des tiers ou à des employés de Mercadona, sauf pour une utilisation telle qu'indiquée ci-dessus.</p>
+    <h2>7. Quels Choix sont Disponibles aux Visiteurs Concernant la Collecte, l'Utilisation et la Distribution des Informations?</h2>
+    <p>Les Visiteurs et les Clients autorisés peuvent refuser de recevoir des informations non sollicitées ou d'être contactés par nous en répondant aux e-mails tels qu'indiqué, ou en nous contactant à [Email].</p>
+    <h2>8. Cookies</h2>
+    <p>Un cookie est une chaîne d'informations qu'un site web stocke sur l'ordinateur d'un visiteur, et que le navigateur du visiteur fournit au site web chaque fois que le visiteur retourne. Mercadona utilise des cookies pour aider Mercadona à identifier et à suivre les visiteurs, leur utilisation du site web de Mercadona, et leurs préférences d'accès au site web. Les visiteurs de Mercadona qui ne souhaitent pas avoir des cookies placés sur leurs ordinateurs doivent paramétrer leurs navigateurs pour refuser les cookies avant d'utiliser les sites web de Mercadona, avec l'inconvénient que certaines fonctionnalités des sites web de Mercadona peuvent ne pas fonctionner correctement sans l'aide de cookies.</p>
+    <h2>9. Comment Pouvons-Nous Protéger Vos Informations?</h2>
+    <p>La sécurité de vos Informations Personnellement Identifiables est importante pour nous, mais rappelez-vous qu'aucune méthode de transmission sur Internet, ou méthode de stockage électronique n'est sécurisée à 100%. Bien que nous nous efforcions d'utiliser des moyens commercialement acceptables pour protéger vos Informations Personnellement Identifiables, nous ne pouvons pas garantir leur sécurité absolue.</p>
+    <h2>10. Modifications de cette Politique de Confidentialité</h2>
+    <p>Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Nous vous informerons des changements importants dans la façon dont nous traitons les informations personnelles en envoyant un avis à l'adresse e-mail principale spécifiée dans votre compte, en plaçant un avis bien visible sur notre site et/ou en mettant à jour la date de "Dernière mise à jour" en haut de cette Politique de Confidentialité.</p>
+    <h2>11. Contactez-Nous</h2>
+    <p>Si vous avez des questions sur cette Politique de Confidentialité, ou votre relation avec ce site, veuillez nous contacter via notre formulaire de contact sur la page contact.</p>   
+</section>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/Scripts/nav-hamburger.js') }}"></script>
+<script src="{{ asset('assets/js/Scripts/nav-background.js') }}"></script>
+{% endblock %}

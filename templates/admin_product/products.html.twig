@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mercadona{% endblock %}
+        
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">{% endblock %}
+
+{% block body %}
+{{ include('fragment/nav-admin.html.twig')}}
+
+
+{# content body #}
+
+<div class="margin-nav">
+</div>
+
+    <div class="banner--dashboard">
+        <h1 class="title dashboard">Tableau de bord : produits</h1>
+        <div class="banner__param">
+            <div class="banner__param-filter">
+                <button class="btn  btn-filter">Afficher les filtres<img src="{{ asset('assets/icons/filter_icon.svg') }}"
+                        alt="">
+                </button>
+            </div>
+
+            <div class="banner__param-sort">
+                <select id="list-price">
+                    <option value='default'>Trier par : Mis en avant</option>
+                    <option value='asc'>Trier par : Prix croissant</option>
+                    <option value='desc'>Trier par : Prix décroissant</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="filter-product">
+            <div class="filter-product__checkbox">
+                Catégories
+                <hr>
+                <select id="list-filter" >
+                    <option value="default">Aucuns</option>
+                    <option value="Épicerie salée">Épicerie salée</option>
+                    <option value="Épicerie sucrée">Épicerie sucrée</option>
+                    <option value="Boissons">Boissons</option>
+                    <option value="Entretien">Entretien</option>
+                    <option value="Bébé">Bébé</option>
+                    <option value="Autre">Autre</option>
+                </select>
+            </div>
+
+            <div id="isPromo">
+                <label for="isPromo-check">En Promotion</label>
+                <hr>
+                <input type="checkbox" id="isPromo-check" name="product[isPromo]">
+            </div>
+        </div>
+    </div>
+
+
+{% if app.user %}
+
+<h4>Bonjour "{{ app.user.username }}".</h4>
+
+{% endif %}
+
+<a href="{{ path('app_add_product') }}" class=""btn--add"">
+  <button class="btn--add">
+        ++ Ajouter produit
+    </button>
+</a>
+
+{% for message in app.flashes('success') %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+{% endfor %}
+
+{% for message in app.flashes('error') %}
+    <div class="alert alert-danger">
+        {{ message }}
+    </div>
+{% endfor %}
+
+<div class="grid">
+
+{% for product in products %}
+    <div class="grid__item">
+        <div class="card">
+            <h3>ID : {{ product.id }}</h3>
+                    <a href="{{ path('app_update_product', {'id': product.id})  }}">
+            <button class="btn--edit">
+                        Modifier produit
+            </button>
+                    </a>
+                <a href="{{ path('app_delete_product', {'id': product.id}) }}">
+            <button class="btn--delete">
+                    Supprimmer produit
+            </button>
+                </a>
+        <div class="card__img">
+            {% if product.imgPath %}
+                <img src="{{ asset('uploads/products/' ~ product.imgPath) }}" alt="Image du produit" class="'img-product">
+            {% endif %}
+        </div>
+        <div class="card__name">{{ product.name }}</div>
+        <hr>
+        <div class="card__categ">{{ product.categ }}</div>
+        <div class="card__description">{{ product.descrip }}</div>
+        <hr>
+        <div class="card__price">
+            <div class="price__nopromo price"><span>{{ product.price }}</span></div>
+            <div class="price__percentage price"><span>{{ product.promoValue }}</span></div>
+            <div class="price__promo price"><span>{{ product.promoPrice }}</span></div>
+        </div>
+        <hr>
+        <div class="card__date"><span>
+        {% if product.creationDate and product.endingDate %}
+            Du {{ product.creationDate|date('d/m/Y') }} au {{ product.endingDate|date('d/m/Y') }}
+        {% endif %}
+        </span></div>
+        </div>
+    </div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/Scripts/nav-hamburger.js') }}"></script>
+<script src="{{ asset('assets/js/Scripts/nav-background.js') }}"></script>
+<script src="{{ asset('assets/js/Scripts/banner-open.js') }}"></script>
+<script src="{{ asset('assets/js/Scripts/price.js') }}"></script>
+<script src="{{ asset('assets/js/Scripts/banner-sorts--dash.js') }}"></script>
+{% endblock %}

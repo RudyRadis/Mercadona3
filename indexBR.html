@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ttt
+
+
+    <div class="banner__param-sort">
+        <select id="list-price">
+            <a href="{{ path('app_filter_sort', {'categ': 'Épicerie salée', 'order': 'default'}) }}" data-category="Épicerie salée">
+                <option>Trier par : Mise en avant</option>
+            </a>
+            <a href="{{ path('app_filter_sort', {'categ': 'Épicerie salée', 'order': 'asc'}) }}" data-category="Épicerie salée">
+                <option>Trier par : Prix croissant</option>
+            </a>
+            
+            <option>
+                <a href="{{ path('app_filter_sort', {'categ': 'Épicerie salée', 'order': 'desc'}) }}" data-category="Épicerie salée">
+                    Trier par : Mise en avant
+                </a>
+            </option>
+
+            <option>
+                <a href="{{ path('app_filter_sort', {'categ': 'Épicerie salée', 'order': 'desc'}) }}" data-category="Épicerie salée">
+                    Trier par : Prix croissant
+                </a>
+            </option>
+
+                <option>
+                    <a href="{{ path('app_filter_sort', {'categ': 'Épicerie salée', 'order': 'desc'}) }}" data-category="Épicerie salée">
+                        Trier par : Prix décroissant
+                    </a>
+                </option>
+                        
+     
+        </select>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

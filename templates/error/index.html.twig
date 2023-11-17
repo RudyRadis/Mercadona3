@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mercadona{% endblock %}
+        
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">{% endblock %}
+
+{% block body %}
+<header>
+    <nav class="main-nav main-nav--green">
+        <a href="{{ path('app_default') }}" class="main-nav__icon" aria-label="visit homepage" aria-curent="page">
+            <img src="{{ asset('assets/images/mercadona_Logo.jpg') }}" alt="Logo Mercadona">
+            <span>Mercadona</span>
+        </a>
+        <div class="main-nav__links">
+            <button class="main-nav__links-hamburger" type="button" aria-label="Toggle navigation" aria-expend="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="main-nav__links-container main-nav__links-container--coral">
+                <a href="{{ path('app_filter_sort', {'categ': 'default', 'order': 'default'}) }}" data-category="Épicerie salée">Épicerie salée</a>
+                <a href="{{ path('app_filter_sort', {'categ': 'Épicerie sucrée', 'order': 'default'}) }}" data-category="Épicerie sucrée">Épicerie sucrée</a>
+                <a href="{{ path('app_filter_sort', {'categ': 'Boissons', 'order': 'default'}) }}" data-category="Boissons">Boissons</a>
+                <a href="{{ path('app_filter_sort', {'categ': 'Entretien', 'order': 'default'}) }}" data-category="Entretien">Entretien</a>
+                <a href="{{ path('app_filter_sort', {'categ': 'Bébé', 'order': 'default'}) }}" data-category="Bébé">Bébé</a>
+                <a href="{{ path('app_filter_sort', {'categ': 'Autre', 'order': 'default'}) }}" data-category="Autre">Autre</a>
+                <a href="{{ path('app_contact') }}">Contact</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="background"></div>
+
+<div class="margin-nav"></div>
+
+<h1>ERREUR</h1>
+<h4>La page que vous recherchez n'existe pas... ou plus !</h4>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/Scripts/nav-hamburger.js') }}"></script>
+<script src="{{ asset('assets/js/Scripts/nav-background.js') }}"></script>
+{% endblock %}
+

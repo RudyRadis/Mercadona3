@@ -18,6 +18,8 @@ framework:
     php_errors:
         log: true
 
+    # To generate route errors.    
+    error_controller: App\Controller\ErrorController::show
 when@test:
     framework:
         test: true

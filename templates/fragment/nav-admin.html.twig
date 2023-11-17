@@ -1,0 +1,25 @@
+<header>
+    <nav class="main-nav anim-nav admin-nav">
+        <a href="{{ path('app_default') }}" class="main-nav__icon" aria-label="visit homepage" aria-curent="page">
+            <img src="{{ asset('assets/images/mercadona_Logo.jpg') }}" alt="Logo Mercadona">
+            <span>Mercadona</span>
+        </a>
+        <div class="main-nav__links">
+            <button class="main-nav__links-hamburger" type="button" aria-label="Toggle navigation" aria-expend="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="main-nav__links-container main-nav__links-container--coral">
+                <a href="{{ path('app_products') }}">Produits</a>
+                <a href="{{ path('app_categ') }}">Catégories</a>
+            </div>
+        </div>
+        <div class="main-nav-authentification">
+            <a href="{{ path('app_logout') }}" class="main-nav-authentification--logout" aria-label="Sign in page">
+                <img src="{{ asset('assets/icons/logout_icon.svg') }}" alt="logout-icon">
+            </a>
+        </div>
+    </nav>
+</header>
+<div class="background"></div>

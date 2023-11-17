@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mercadona{% endblock %}
+        
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">{% endblock %}
+
+{% block body %}
+{{ include('fragment/nav-admin.html.twig')}}
+
+{# content body #}
+
+<div class="margin-nav">      
+</div>
+
+<h1>Modifier produit</h1>
+
+<section class="update-product">
+<div class="card--dash">
+
+{% if product.imgPath %}
+    <img src="{{ asset('uploads/products/' ~ product.imgPath) }}" alt="Image du produit" class="'img-product">
+{% endif %}
+
+{{ form(form)}}
+
+</div>
+</section>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/Scripts/nav-hamburger.js') }}"></script>
+<script src="{{ asset('assets/js/Scripts/nav-background.js') }}"></script>
+<script src="{{ asset('assets/js/Scripts/form-product.js') }}"></script>
+{% endblock %}

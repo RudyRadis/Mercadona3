@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        {# font #}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;700;900&family=Volkhov:wght@700&display=swap" rel="stylesheet">
+        {# title #}
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# style css #}
         {% block stylesheets %}
-        {% endblock %}
-
-        {% block javascripts %}
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <section class="content">
+            {# content #}
+            {% block body %}
+            {% endblock %}
+        </section>
+
+
+        {# footer #}
+        <footer>
+            <div class="footer__content">
+                <div class="informations">
+                    <h3>Aide</h3>
+                    <div class="footer__content--link">
+                        <a href="{{ path('app_contact') }}">Contact</a>
+                        <a href="{{ path('app_legal_information') }}">Informations légales</a>
+                        <a href="{{ path('app_privacy_policy') }}">Politique de confidentialité</a>
+                    </div>
+                </div>
+                <div class="social-networks">
+                    <h3>Nous suivre</h3>
+                    <div class="footer__content--link">
+                        <a href="https://www.facebook.com" target="_blank"><img src="{{ asset('assets/icons/facebook_icon.svg') }}"
+                                alt="user-icon"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img src="{{ asset('assets/icons/instagram_icon.svg') }}"
+                                alt="user-icon"></a>
+                        <a href="https://www.tiktok.com" target="_blank"><img src="{{ asset('assets/icons/tiktok_icon.svg') }}"
+                                alt="user-icon"></a>
+                        <a href="https://www.youtube.com" target="_blank"><img src="{{ asset('assets/icons/youtube_icon.svg') }}"
+                                alt="user-icon"></a>
+                    </div>
+                </div>
+            </div>
+            <span>@Tous droits réservé</span>
+        </footer>
+
+
+        {# js #}
+        {% block javascripts %}
+        {% endblock %}
     </body>
 </html>

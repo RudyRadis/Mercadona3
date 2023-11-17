@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mercadona{% endblock %}
+        
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">{% endblock %}
+
+{% block body %}
+{# {{ include('fragment/nav_empty.html.twig')}} #}
+
+        <div class="banner">
+        <div class="banner__param">
+            <div class="banner__param-filter">
+                <button class="btn  btn-filter">Afficher les filtres<img src="ressources/Filter-Icon-d038imc3.svg"
+                        alt="">
+                </button>
+            </div>
+
+            <div class="banner__param-sort">
+                <select id="list-price">
+                    <option>Trier par : Mise en avant</option>
+                    <option>Trier par : Prix croissant</option>
+                    <option>Trier par : Prix décroissant</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="filter-product">
+            <div class="filter-product__checkbox">
+                Filtres
+                <hr>
+                <select id="list-filter" >
+                    <option value="null">Aucuns</option>
+                    <option value="Épicerie salée">Épicerie salée</option>
+                    <option value="Épicerie sucrée">Épicerie sucrée</option>
+                    <option value="Boissons">Boissons</option>
+                    <option value="Entretien">Entretien</option>
+                    <option value="Bébé">Bébé</option>
+                    <option value="Autre">Autre</option>
+                </select>
+               
+            </div>
+
+            <div class="filter-product__price">
+                Prix
+                <hr>
+                <input type="number" maxlength="13" id="low-price" placeholder="Prix Min" name="low-price" class="">
+                <input type="tenumberxt" maxlength="13" id="high-price" placeholder="Prix Max" name="high-price" class="">
+                <button class="btn">Valider</button>
+                
+            </div>
+        </div>
+    </div>
+
+    <h1>Aucuns produits trouvés.</h1>
+
+    <div class="margin-nav">
+        
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/Scripts/nav-hamburger.js') }}"></script>
+<script src="{{ asset('assets/js/Scripts/nav-background.js') }}"></script>
+{% endblock %}

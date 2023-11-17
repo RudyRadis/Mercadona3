@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mercadona{% endblock %}
+        
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">{% endblock %}
+
+{% block body %}
+{{ include('fragment/nav-admin.html.twig')}}
+
+
+{# content body #}
+
+<div class="margin-nav">   
+</div>
+
+<h1>Tableau de bord : catégories</h1>
+<h4>Bonjour "AdminSB".</h4>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Catégorie</th>
+        <th>Nav Barre</th>
+        <th>Date de création</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Épicerie salée</td>
+        <td>True</td>
+        <td>2023-11-10</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Épicerie sucrée</td>
+        <td>True</td>
+        <td>2023-11-10</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Boissons</td>
+        <td>True</td>
+        <td>2023-11-10</td>
+    </tr>
+     <tr>
+        <td>4</td>
+        <td>Entretien</td>
+        <td>True</td>
+        <td>2023-11-10</td>
+    </tr>
+     <tr>
+        <td>5</td>
+        <td>Bébé</td>
+        <td>True</td>
+        <td>2023-11-10</td>
+    </tr>
+     <tr>
+        <td>6</td>
+        <td>Autre</td>
+        <td>True</td>
+        <td>2023-11-10</td>
+    </tr>
+</table>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/Scripts/nav-hamburger.js') }}"></script>
+<script src="{{ asset('assets/js/Scripts/nav-admin-background.js') }}"></script>
+{% endblock %}

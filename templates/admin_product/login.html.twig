@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mercadona{% endblock %}
+        
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">{% endblock %}
+
+{% block body %}
+{{ include('fragment/nav.html.twig')}}
+
+{# content body #}
+
+<div class="margin-nav">
+</div>
+
+<h1>S'identifier</h1>
+
+<section class="login">
+    <div class="login-form">
+        <form action="" method="">
+             <label for="idUser">Identifiant</label>
+             <input type="text" id="idUser" name="idUser" placeholder="Votre identifiant">
+             <label for="passWord">Mot de passe</label>
+             <input type="text" id="passWord" name="passWord" placeholder="Votre mot de passe">
+             <button class="btn">Envoyer</button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/Scripts/nav-hamburger.js') }}"></script>
+<script src="{{ asset('assets/js/Scripts/nav-background.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,43 @@
+<header>
+    <nav class="main-nav">
+        <a href="{{ path('app_default') }}" class="main-nav__icon" aria-label="visit homepage" aria-curent="page">
+            <img src="{{ asset('assets/images/mercadona_Logo.jpg') }}" alt="Logo Mercadona">
+            <span>Mercadona</span>
+        </a>
+        <div class="main-nav__links">
+            <button class="main-nav__links-hamburger" type="button" aria-label="Toggle navigation" aria-expend="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="main-nav__links-container">
+                <a href="{{ path('app_filter_sort', {'categ': 'Épicerie salée', 'order': 'default', 'promo' : 'false'}) }}" data-category="Épicerie salée">Épicerie salée</a>
+                <a href="{{ path('app_filter_sort', {'categ': 'Épicerie sucrée', 'order': 'default', 'promo' : 'false'}) }}" data-category="Épicerie sucrée">Épicerie sucrée</a>
+                <a href="{{ path('app_filter_sort', {'categ': 'Boissons', 'order': 'default', 'promo' : 'false'}) }}" data-category="Boissons">Boissons</a>
+                <a href="{{ path('app_filter_sort', {'categ': 'Entretien', 'order': 'default', 'promo' : 'false'}) }}" data-category="Entretien">Entretien</a>
+                <a href="{{ path('app_filter_sort', {'categ': 'Bébé', 'order': 'default', 'promo' : 'false'}) }}" data-category="Bébé">Bébé</a>
+                <a href="{{ path('app_filter_sort', {'categ': 'Autre', 'order': 'default', 'promo' : 'false'}) }}" data-category="Autre">Autre</a>
+                <a href="{{ path('app_contact') }}">Contact</a>
+            </div>
+        </div>
+        <div class="main-nav-authentification">  
+            {% if app.user and 'ROLE_ADMIN' in app.user.roles %}
+                <a href="{{ path('app_products') }}" class="main-nav-authentification--user" aria-label="Sign in page">
+                     <img src="{{ asset('assets/icons/user_icon.svg') }}" alt="user-icon">
+                </a>
+            {% else %}
+                 <a href="{{ path('app_login') }}" class="main-nav-authentification--user" aria-label="Sign in page">
+                    <img src="{{ asset('assets/icons/user_icon.svg') }}" alt="user-icon">
+                 </a>
+            {% endif %}        
+        </div>
+    </nav>
+    <div class="home">
+        <h1>Des promotions<br>Toute l'année</h1>
+        <img src="{{ asset('assets/images/mercadona_Carousel.png') }}" alt="" class="slider">
+        <img src="{{ asset('assets/images/mercadona_Carousel2.png') }}" alt="" class="slider">
+        <img src="{{ asset('assets/images/mercadona_Carousel3.png') }}" alt="" class="slider">
+    </div>
+</header>
+
+<div class="background"></div>

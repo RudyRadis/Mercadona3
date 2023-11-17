@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mercadona{% endblock %}
+        
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">{% endblock %}
+
+{% block body %}
+{{ include('fragment/nav.html.twig')}}
+
+{# content body #}
+
+<div class="margin-nav">    
+</div>
+
+<h1>Formulaire de contact</h1>
+
+<section class="contact">
+    <div class="contact-form">
+        <form action="" method="">
+             <label for="name">Nom</label>
+             <input type="text" id="name" name="name" placeholder="Votre nom">
+             <label for="phone-number">Téléphone</label>
+             <input type="text" id="phone-number" name="phone-number" placeholder="Votre numéro de téléphone">
+             <label for="email">Email</label>
+             <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+             <label for="Object">Objet</label>
+             <input type="text" id="Object" name="Object" placeholder="L'objet de votre mail">
+             <label for="message">Message</label>
+             <textarea id="message" name="message" placeholder="Le contenu de votre message." required></textarea>
+             <button class="btn">Envoyer</button>
+        </form>
+    </div>
+    <div class="coordinates">
+        <p class="content--white">Coordonnées</p><br>
+        <p class="scontent--while">Dominique Boussuge<br><br>Institut International des Experts<br>23 CHE DU PASTEL<br>81290 VIVIERS-LES-MONTAGNES<br><br>06 23 69 61 35</p>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/Scripts/nav-hamburger.js') }}"></script>
+<script src="{{ asset('assets/js/Scripts/nav-background.js') }}"></script>
+{% endblock %}
