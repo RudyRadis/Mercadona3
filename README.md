@@ -1,66 +1,82 @@
-# Titre du projet
-_(juste en dessous des badges sympatiques à placer)_
-
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com)
-
-Une petite description du projet
+# Mercadona
 
 ## Pour commencer
 
-Entrez ici les instructions pour bien débuter avec votre projet...
+!!!!! Ce projet est un sujet d'examen dans le cadre d'une formation en développement web. Tout éléments de contexte à caractère commerciale n'est que pure fiction. !!!!!
+
+Mercadona est une application web pour la société de distribution Mercadona. Elle est hébergée sur Heroku. Elle permet à l'utilisateur de consulter le catalogue des produits Mercadona.
+
+L'utilisateur peut trier les produits par prix et les filtrer par catégories. Il peut également consulter les prix des produits et vérifier si ces derniers sont en promotion.
+
+Cette application dispose d'un back-office pour que l'administrateur puisse mettre à jour le catalogue. Il peut donc ajouter, modifier ou supprimer un produit.
 
 ### Pré-requis
 
-Ce qu'il est requis pour commencer avec votre projet...
+Ce qu'il est requis pour modifier ce projet :
 
-- Programme 1
-- Programme 2
-- etc...
+- Votre IDE préféré
+- PostgreSQL
+- Symfony
+- PHPUnit
+- NodeJS
+- Heroku
 
 ### Installation
 
-Les étapes pour installer votre programme....
+1) Initialisation d'un projet node js :
+npm init
 
-Dites ce qu'il faut faire...
+2) Charger un projet symfony déjà existant :
+cd projects/
+git clone ...
 
-_exemple_: Executez la commande ``telnet mapscii.me`` pour commencer ensuite [...]
+3) Installer les dépendances dans vendor :
+cd my-project/
+composer install
+
+4) Lancer l'application
+cd my-project/
+symfony server:start
+
+## Conçu avec
+
+* [Visual Studio Code](https://code.visualstudio.com) - Éditeur de code
+* [Node.js®](https://nodejs.org/en) - Environnement d'exécution
+* [Symfony](https://symfony.com/) - Framework PHP (back-end)
+* [PostgreSQL](http://https://www.postgresql.org/) - SGBDR
 
 
-Ensuite vous pouvez montrer ce que vous obtenez au final...
+## Tests
 
-## Démarrage
+Pour exécuter les tests, utiliser la commande `php bin/phpunit`.
 
-Dites comment faire pour lancer votre projet
+## Organisation du code pour le dossier source
 
-## Fabriqué avec
+Controller => gestion des controller
+Entity => gestion des tables
+Eventlistener => gestion des écouteurs d'évènements
+Exception => gestion des exceptions
+Form => gestion des formulaires
+Repository => gestion des répositorys
+templates => gestion des vues (fichiers html.twig)
+tests => gestion des tests
 
-Entrez les programmes/logiciels/ressources que vous avez utilisé pour développer votre projet
+## Tutoriel
 
-_exemples :_
-* [Materialize.css](http://materializecss.com) - Framework CSS (front-end)
-* [Atom](https://atom.io/) - Editeur de textes
-
-## Contributing
-
-Si vous souhaitez contribuer, lisez le fichier [CONTRIBUTING.md](https://example.org) pour savoir comment le faire.
+[Lien du tutoriel d'utilisation] (https://docs.google.com/document/d/1ja1XmzyQ9yDrJDYEL3kiIELbyTU0PqpU/edit?usp=drive_link&ouid=115802809323817182028&rtpof=true&sd=true)
 
 ## Versions
-Listez les versions ici 
-_exemple :_
-**Dernière version stable :** 5.0
-**Dernière version :** 5.1
-Liste des versions : [Cliquer pour afficher](https://github.com/your/project-name/tags)
-_(pour le lien mettez simplement l'URL de votre projets suivi de ``/tags``)_
+
+**Dernière version :** 1.0.0-alpha
 
 ## Auteurs
-Listez le(s) auteur(s) du projet ici !
-* **Jhon doe** _alias_ [@outout14](https://github.com/outout14)
 
-Lisez la liste des [contributeurs](https://github.com/your/project/contributors) pour voir qui à aidé au projet !
-
-_(pour le lien mettez simplement l'URL de votre projet suivi de ``/contirubors``)_
+* **Rudy Frassin** _alias_ [@outout14](https://github.com/RudyRadis)
 
 ## License
 
-Ce projet est sous licence ``exemple: WTFTPL`` - voir le fichier [LICENSE.md](LICENSE.md) pour plus d'informations
+Ce projet est sous licence ``proprietary``
 
+## Contact
+
+Rudy Frassin - email@example.com
