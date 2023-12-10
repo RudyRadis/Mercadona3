@@ -63,7 +63,7 @@ tests => gestion des tests
 
 ## Tutoriel
 
-* [Lien du tutoriel d'utilisation] (https://docs.google.com/document/d/1ja1XmzyQ9yDrJDYEL3kiIELbyTU0PqpU/edit?usp=drive_link&ouid=115802809323817182028&rtpof=true&sd=true)
+* [Lien du tutoriel d'utilisation](https://docs.google.com/document/d/1ja1XmzyQ9yDrJDYEL3kiIELbyTU0PqpU/edit?usp=drive_link&ouid=115802809323817182028&rtpof=true&sd=true)
 
 ## Versions
 
