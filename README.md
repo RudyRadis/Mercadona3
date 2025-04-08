@@ -1,20 +1,48 @@
 # Mercadona
 
-## Pour commencer
+## Description
 
-!!!!! Ce projet est un sujet d'examen dans le cadre d'une formation en développement web. Tout éléments de contexte à caractère commerciale n'est que pure fiction. !!!!!
+Ce projet est un sujet d'examen dans le cadre de la formation STUDI Bachelor Développeur d'applications web/mobile. Tout élément de contexte à caractère commercial n'est que pure fiction.
 
-Mercadona est une application web pour la société de distribution Mercadona. Elle est hébergée sur Heroku. Elle permet à l'utilisateur de consulter le catalogue des produits Mercadona.
+Mercadona est une application web conçue pour la société de distribution Mercadona. Elle est hébergée sur Heroku. Elle permet à l'utilisateur de consulter le catalogue des produits proposés par Mercadona.
 
-L'utilisateur peut trier les produits par prix et les filtrer par catégories. Il peut également consulter les prix des produits et vérifier si ces derniers sont en promotion.
+L'utilisateur peut trier les produits par prix et les filtrer par catégories. Il peut également consulter les prix et vérifier si certains produits sont en promotion.
 
-Cette application dispose d'un back-office pour que l'administrateur puisse mettre à jour le catalogue. Il peut donc ajouter, modifier ou supprimer un produit.
+Cette application dispose d'un back-office permettant à l’administrateur de mettre à jour le catalogue : ajouter, modifier ou supprimer un produit.
+
+Pour se connecter à l'espace Admin, l'identifiant est "Admin" et le mot de passe "12345"
+
+Un produit comporte les éléments suivants :
+- Nom
+- Catégorie
+- Description
+- Prix
+- Prix en promotion
+- Date de début de la promotion
+- Date de fin de la promotion
+- Image
+
+## Technologies
+
+1. HTML  
+2. CSS  
+3. JavaScript  
+4. PHP  
+5. Symfony  
+6. Heroku  
+7. PostgreSQL 
+
+### Liens
+
+- 🌐 [Voir l'application en ligne sur Heroku](https://secret-falls-68265-e0e831d6abcf.herokuapp.com)
+
+
 
 ### Pré-requis
 
-Ce qu'il est requis pour modifier ce projet :
+Ce dont vous avez besoin pour modifier ce projet :
 
-- Votre IDE préféré
+- Votre IDE préféré (ex : VS Code)
 - PostgreSQL
 - Symfony
 - PHPUnit
@@ -23,7 +51,7 @@ Ce qu'il est requis pour modifier ce projet :
 
 ### Installation
 
-1) Initialisation d'un projet node js :
+1) Initialisation des dépendances Node JS :
 npm init
 
 2) Charger un projet symfony déjà existant :
@@ -45,11 +73,6 @@ symfony server:start
 * [Symfony](https://symfony.com/) - Framework PHP (back-end)
 * [PostgreSQL](http://https://www.postgresql.org/) - SGBDR
 
-
-## Tests
-
-Pour exécuter les tests, utiliser la commande `php bin/phpunit`.
-
 ## Organisation du code pour le dossier source
 
 Controller => gestion des controller
@@ -67,11 +90,11 @@ tests => gestion des tests
 
 ## Versions
 
-**Dernière version :** 1.0.0-alpha
+**Dernière version :** 1.0.0
 
 ## Auteurs
 
-* **Rudy Frassin** _alias_ [@outout14](https://github.com/RudyRadis)
+* [@Rudy Frassin](https://github.com/RudyRadis)
 
 ## License
 
@@ -79,4 +102,4 @@ Ce projet est sous licence ``proprietary``
 
 ## Contact
 
-Rudy Frassin - email@example.com
+Rudy Frassin - rudy.frassin@gmail.com
